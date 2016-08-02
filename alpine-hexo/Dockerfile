@@ -18,8 +18,8 @@ VOLUME ["/data/website/source", "/data/website/themes"]
 
 EXPOSE 80
 
-COPY docker-entrypoint.sh /data/docker/docker-entrypoint.sh
+#COPY docker-entrypoint.sh /data/docker/docker-entrypoint.sh
 
-ENTRYPOINT ["/data/docker/docker-entrypoint.sh"]
+#ENTRYPOINT ["/data/docker/docker-entrypoint.sh"]
 
 CMD hexo server -i 0.0.0.0 -p 80
