@@ -2,7 +2,6 @@ FROM soulteary/alpine-base
 
 MAINTAINER soulteary <soulteary@gmail.com>
 
-
 # https://github.com/quiklyn/docker-openresty
 
 # https://openresty.org/#Download

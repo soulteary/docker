@@ -9,13 +9,12 @@ set -e
 # ===============
 # = build tools =
 # ===============
-apk update && apk upgrade && apk add \
-  gcc \
-  make \
-  musl-dev \
-  openssl-dev \
-  zlib-dev \
-  pcre-dev
+apk add   gcc \
+          make \
+          musl-dev \
+          openssl-dev \
+          zlib-dev \
+          pcre-dev
 
 # =============
 # = openresty =

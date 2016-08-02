@@ -25,6 +25,4 @@ RUN apk add git \
 
 RUN sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd
 
-RUN rm -rf /var/cache/apk/
-
 CMD ["/bin/bash"]
