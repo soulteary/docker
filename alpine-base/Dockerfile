@@ -2,6 +2,10 @@ FROM alpine:3.4
 
 MAINTAINER soulteary <soulteary@gmail.com>
 
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL=en_US.UTF-8
+
 RUN echo '' > /etc/apk/repositories && \
     echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/main"         >> /etc/apk/repositories && \
     echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/community"    >> /etc/apk/repositories && \
@@ -10,7 +14,17 @@ RUN echo '' > /etc/apk/repositories && \
     echo "Asia/Shanghai" > /etc/timezone
 
 RUN apk --no-cache --no-progress update && \
-    apk --no-cache --no-progress upgrade && \
-    rm -rf /var/cache/apk/*
+    apk --no-cache --no-progress upgrade
 
-CMD ["/bin/sh"]
+RUN apk add git \
+            openssh \
+            perl \
+            bash\
+            wget \
+            curl
+
+RUN sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd
+
+RUN rm -rf /var/cache/apk/
+
+CMD ["/bin/bash"]
