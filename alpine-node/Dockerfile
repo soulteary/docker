@@ -24,8 +24,8 @@ RUN apk add --no-cache make gcc g++ python linux-headers paxctl libgcc libstdc++
     DD8F2338BAE7501E3DD5AC78C273792F7D83545D \
     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
     B9AE9905FFD7803F25714661B63B535A4C206CA9 && \
-  curl -o node-${VERSION}.tar.gz -sSL https://npm.taobao.org/mirrors/node/${VERSION}/node-${VERSION}.tar.gz && \
-  curl -o SHASUMS256.txt.asc -sSL https://npm.taobao.org/mirrors/node/${VERSION}/SHASUMS256.txt.asc && \
+  curl -o node-${VERSION}.tar.gz -sSL https://nodejs.org/dist/${VERSION}/node-${VERSION}.tar.gz && \
+  curl -o SHASUMS256.txt.asc -sSL https://nodejs.org/dist/${VERSION}/SHASUMS256.txt.asc && \
   gpg --verify SHASUMS256.txt.asc && \
   grep node-${VERSION}.tar.gz SHASUMS256.txt.asc | sha256sum -c - && \
   tar -zxf node-${VERSION}.tar.gz && \
