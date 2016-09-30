@@ -8,7 +8,7 @@ MAINTAINER soulteary <soulteary@gmail.com>
 # ENV VERSION=v0.12.15 NPM_VERSION=2
 # ENV VERSION=v4.4.7 NPM_VERSION=2
 # ENV VERSION=v5.12.0 NPM_VERSION=3
-ENV VERSION=v6.3.1 NPM_VERSION=3
+ENV VERSION=v6.7.0 NPM_VERSION=3
 
 # For base builds
 # ENV CONFIG_FLAGS="--without-npm" RM_DIRS=/usr/include

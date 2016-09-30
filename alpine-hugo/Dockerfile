@@ -1,0 +1,16 @@
+FROM soulteary/alpine-base
+
+MAINTAINER soulteary <soulteary@gmail.com>
+
+ENV HUGO_VERSION 0.16
+ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
+
+RUN apk --no-cache --no-progress update && apk add py-pygments && rm -rf /var/cache/apk/*
+
+COPY ./hugo_0.16_linux-64bit.tgz /usr/local/
+#ADD https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY}.tgz /usr/local/
+RUN tar xzf /usr/local/${HUGO_BINARY}.tgz -C /usr/local/bin/ \
+	&& rm /usr/local/${HUGO_BINARY}.tgz
+
+EXPOSE 1313
+CMD hugo version

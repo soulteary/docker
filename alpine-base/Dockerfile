@@ -23,6 +23,8 @@ RUN apk add git \
             wget \
             curl
 
-RUN sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd
+RUN sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd && \
+    echo -ne "Alpine Linux 3.4 image. (`uname -rsv`)\n" >> /root/.built && \
+    rm /var/cache/apk/*
 
 CMD ["/bin/bash"]
