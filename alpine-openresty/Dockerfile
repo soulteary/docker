@@ -5,9 +5,9 @@ MAINTAINER soulteary <soulteary@gmail.com>
 # https://github.com/quiklyn/docker-openresty
 
 # https://openresty.org/#Download
-ENV OPENRESTY_VERSION 1.9.15.1
+ENV OPENRESTY_VERSION 1.11.2.1
 # https://github.com/keplerproject/luarocks/wiki/Release-history
-ENV LUAROCKS_VERSION 2.3.0
+ENV LUAROCKS_VERSION 2.4.0
 
 ENV OPENRESTY_PREFIX /usr/local/openresty
 ENV NGINX_PREFIX ${OPENRESTY_PREFIX}/nginx

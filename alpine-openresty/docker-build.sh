@@ -6,6 +6,8 @@
 
 set -e
 
+apk --no-cache --no-progress update
+
 # ===============
 # = build tools =
 # ===============
