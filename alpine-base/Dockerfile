@@ -2,6 +2,8 @@ FROM alpine:3.4
 
 MAINTAINER soulteary <soulteary@gmail.com>
 
+ENV ALPINE_VERSION 3.4
+
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
@@ -16,15 +18,8 @@ RUN echo '' > /etc/apk/repositories && \
 RUN apk --no-cache --no-progress update && \
     apk --no-cache --no-progress upgrade
 
-RUN apk add git \
-            openssh \
-            perl \
-            bash\
-            wget \
-            curl
+RUN apk add bash \
+    && sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd \
+    && rm /var/cache/apk/*
 
-RUN sed -i -e "s/bin\/ash/bin\/bash/" /etc/passwd && \
-    echo -ne "Alpine Linux 3.4 image. (`uname -rsv`)\n" >> /root/.built && \
-    rm /var/cache/apk/*
-
-CMD ["/bin/bash"]
+CMD [ "/bin/bash" ]
