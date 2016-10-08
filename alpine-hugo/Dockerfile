@@ -2,7 +2,7 @@ FROM soulteary/alpine-base
 
 MAINTAINER soulteary <soulteary@gmail.com>
 
-ENV HUGO_VERSION 0.16
+ENV HUGO_VERSION 0.17
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_linux-64bit
 
 RUN apk --no-cache --no-progress update && apk add py-pygments && rm -rf /var/cache/apk/*
