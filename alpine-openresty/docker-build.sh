@@ -11,12 +11,14 @@ apk --no-cache --no-progress update
 # ===============
 # = build tools =
 # ===============
-apk add   gcc \
+apk add   curl \
+          gcc \
           make \
           musl-dev \
           openssl-dev \
           zlib-dev \
-          pcre-dev
+          pcre-dev \
+          perl
 
 # =============
 # = openresty =

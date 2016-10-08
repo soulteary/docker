@@ -1,4 +1,4 @@
-FROM soulteary/alpine-base
+FROM soulteary/alpine-base:3.4
 
 MAINTAINER soulteary <soulteary@gmail.com>
 
