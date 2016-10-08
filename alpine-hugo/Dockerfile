@@ -1,4 +1,4 @@
-FROM soulteary/alpine-base
+FROM soulteary/alpine-base:3.4
 
 MAINTAINER soulteary <soulteary@gmail.com>
 
@@ -14,4 +14,5 @@ RUN tar xzf /usr/local/${HUGO_BINARY}.tar.gz -C /usr/local/bin/ \
 	&& mv /usr/local/bin/hugo_0.17_linux_amd64/hugo_0.17_linux_amd64 /usr/local/bin/hugo
 
 EXPOSE 1313
-CMD hugo version
+
+CMD ["hugo", "version"]
