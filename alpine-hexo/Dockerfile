@@ -1,4 +1,4 @@
-FROM soulteary/alpine-node:latest
+FROM soulteary/alpine-node:6.7.0
 
 MAINTAINER soulteary <soulteary@gmail.com>
 
@@ -22,4 +22,4 @@ EXPOSE 80
 
 #ENTRYPOINT ["/data/docker/docker-entrypoint.sh"]
 
-CMD hexo server -i 0.0.0.0 -p 80
+CMD ["hexo", "server", "-i", "0.0.0.0", "-p", "80"]
