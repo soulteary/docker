@@ -3,5 +3,5 @@
 !LICENSE
 !cli.sh
 !.gitignore
-!ubuntu-hhvm/
-!ubuntu-hhvm/*
+!ubuntu-hhvm*/
+!ubuntu-hhvm*/*
